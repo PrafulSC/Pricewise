@@ -1,0 +1,20 @@
+{
+  "info": {
+    "name": "PriceWise API",
+    "_postman_id": "b6ad0a18-33ac-4bd8-9f2d-pricewise0001",
+    "description": "Local PriceWise MVP API collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {"name":"Health","request":{"method":"GET","url":"http://localhost:8080/api/health"}},
+    {"name":"List products","request":{"method":"GET","url":"http://localhost:8080/api/products"}},
+    {"name":"Search products","request":{"method":"GET","url":"http://localhost:8080/api/products?search=Samsung"}},
+    {"name":"Categories","request":{"method":"GET","url":"http://localhost:8080/api/categories"}},
+    {"name":"Sellers","request":{"method":"GET","url":"http://localhost:8080/api/sellers"}},
+    {"name":"Product seller prices","request":{"method":"GET","url":"http://localhost:8080/api/products/1/prices"}},
+    {"name":"Product price history","request":{"method":"GET","url":"http://localhost:8080/api/products/1/history"}},
+    {"name":"Add/update price","request":{"method":"POST","url":"http://localhost:8080/api/prices","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"productId\":1,\"sellerId\":1,\"price\":71999,\"productUrl\":\"https://www.amazon.in/\",\"availability\":\"AVAILABLE\"}"}}},
+    {"name":"Add wishlist","request":{"method":"POST","url":"http://localhost:8080/api/wishlist","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"userId\":1,\"productId\":1}"}}},
+    {"name":"Create price alert","request":{"method":"POST","url":"http://localhost:8080/api/alerts","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"userId\":1,\"productId\":1,\"targetPrice\":65000}"}}}
+  ]
+}

@@ -1,0 +1,45 @@
+```gitignore
+# ==============================
+# Java / Maven / Spring Boot
+# ==============================
+backend/target/
+*.class
+*.jar
+*.war
+*.log
+
+# Ignore configuration files containing credentials
+**/application.properties
+**/application.yml
+**/application.yaml
+**/application-local.properties
+**/secrets.properties
+
+# ==============================
+# Environment variables / Secrets
+# ==============================
+.env
+.env.*
+!.env.example
+frontend/.env.local
+
+# ==============================
+# Node / React / Vite
+# ==============================
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ==============================
+# IDE
+# ==============================
+.idea/
+.vscode/
+*.iml
+
+# ==============================
+# Operating System
+# ==============================
+.DS_Store
+Thumbs.db
+desktop.ini
